@@ -11,7 +11,22 @@ public class Product {
         this.id = id;
         this.name = name;
         this.category = category;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
     }
+
+    public void displayInfo(){
+        System.out.println( "Product ID" + this.id+ "Product Name" + this.name+ "Product Category" + this.category + "Product Price" + this.price +"Product Quantity" + this.stockQuantity);
+    }
+
+
+
+
+
+
+
+
+
 
     public int getId() {
         return id;
