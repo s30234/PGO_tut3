@@ -15,12 +15,13 @@ public class Customer {
         this.isLoyalCustomer = isLoyalCustomer;
     }
 
+    public Customer() {
+    }
 
-public void displayInfo(){
-    System.out.println("Customer ID: " + this.id + "Customer name: " + this.firstName + " " + this.lastName + " " + "Customer email: " + this.email + "Loyalty status: " + this.isLoyalCustomer);
-}
-
-
+    public void displayInfo() {
+        System.out.println("Customer ID: " + this.id + "Customer name: " + this.firstName + " " + this.lastName + " "
+                + "Customer email: " + this.email + "Loyalty status: " + this.isLoyalCustomer);
+    }
 
     public int getId() {
         return id;

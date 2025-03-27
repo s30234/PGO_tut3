@@ -8,7 +8,6 @@ public class Order {
     private String orderDate;
     private String status;
 
-
     public Order(int id, Customer customer, Product[] products, int[] quantities, String orderDate, String status) {
         this.id = id;
         this.customer = customer;
@@ -18,30 +17,26 @@ public class Order {
         this.status = status;
     }
 
-
     public double calculateTotalValue() {
         double total = 0;
         for (int i = 0; i < products.length; i++) {
-            total+=products[i].getPrice()*quantities[i];
+            total += products[i].getPrice() * quantities[i];
         }
         return total;
     }
 
     public double applyDiscount() {
         double finalPrice = calculateTotalValue();
-        if(customer.isLoyalCustomer()){
-            finalPrice-= finalPrice*0.1;
+        if (customer.isLoyalCustomer()) {
+            finalPrice -= finalPrice * 0.1;
         }
         return finalPrice;
     }
 
     public void displayDetails() {
-        System.out.println("Order ID: " + id + "Customer: " + customer.getFirstName() + " " + customer.getLastName() + "Order date: "+ orderDate + "Order status: " + status);
+        System.out.println("Order ID: " + id + "Customer: " + customer.getFirstName() + " " + customer.getLastName()
+                + "Order date: " + orderDate + "Order status: " + status);
     };
-
-
-
-
 
     public void setId(int id) {
         this.id = id;
@@ -67,9 +62,6 @@ public class Order {
         this.status = status;
     }
 
-
-
-
     public Product[] getProducts() {
         return products;
     }
@@ -93,7 +85,5 @@ public class Order {
     public String getStatus() {
         return status;
     }
-
-
 
 }

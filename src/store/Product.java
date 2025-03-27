@@ -6,7 +6,6 @@ public class Product {
     private String category;
     private double price;
 
-
     public Product(int id, String name, String category, double price, int stockQuantity) {
         this.id = id;
         this.name = name;
@@ -15,18 +14,14 @@ public class Product {
         this.stockQuantity = stockQuantity;
     }
 
-    public void displayInfo(){
-        System.out.println( "Product ID" + this.id+ "Product Name" + this.name+ "Product Category" + this.category + "Product Price" + this.price +"Product Quantity" + this.stockQuantity);
+    public Product() {
+
     }
 
-
-
-
-
-
-
-
-
+    public void displayInfo() {
+        System.out.println("Product ID" + this.id + "Product Name" + this.name + "Product Category" + this.category
+                + "Product Price" + this.price + "Product Quantity" + this.stockQuantity);
+    }
 
     public int getId() {
         return id;
@@ -66,12 +61,11 @@ public class Product {
 
     private int stockQuantity;
 
-
-    public int GetId(){
+    public int GetId() {
         return this.id;
     }
 
-    public void  setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 }
