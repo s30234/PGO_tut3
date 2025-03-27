@@ -41,28 +41,23 @@ public class main {
         customer2.setLoyalCustomer(false);
         store.addCustomer(customer1);
         store.addCustomer(customer2);
-        // Create orders
         Product[] orderProducts1 = { product1, product2 };
         int[] orderQuantities1 = { 1, 1 };
         Order order1 = store.createOrder(customer1, orderProducts1, orderQuantities1);
-        order1.applyDiscount(); // Apply discount for a loyal customer
+        order1.applyDiscount();
         store.updateStockAfterOrder(order1);
-        // Display information
         System.out.println("Order details:");
         order1.displayDetails();
         System.out.println("\nStock levels after the order:");
         store.displayProductsInCategory("Laptop");
         store.displayProductsInCategory("Mouse");
-        // Change order status
         store.changeOrderStatus(order1.getId(), "Completed");
         System.out.println("\nOrder status after update:");
         order1.displayDetails();
-        // Add another order
         Product[] orderProducts2 = { product3, product2 };
         int[] orderQuantities2 = { 2, 1 };
         Order order2 = store.createOrder(customer2, orderProducts2, orderQuantities2);
         store.updateStockAfterOrder(order2);
-        // Display customer orders
         System.out.println("\nOrders of John Smith:");
         store.displayCustomerOrders(1);
     }
